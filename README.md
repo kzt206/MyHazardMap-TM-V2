@@ -1,4 +1,4 @@
-# MyHazardMap-TM 
+# MyHazardMap-TM version 2
 
 小中学校周辺のハザード地図の画像ファイルを用意するたけで、
 簡単に自分だけのハザードマップが作製できるアプリです。

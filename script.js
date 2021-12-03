@@ -49,6 +49,7 @@ canvasContact.width = original_width + photo_original_width;
 canvasContact.height = original_height + photo_original_height;
 
 
+let img2 = new Image()
 //マップ画像の読み込みイベントの設定
 const loadMapFile = document.getElementById("loadMapFile");
 loadMapFile.addEventListener("change",function(evt){
@@ -61,6 +62,7 @@ loadMapFile.addEventListener("change",function(evt){
         let dataURL = reader.result;
         let img = new Image();
         img.src = dataURL;
+        img2.src = dataURL;
         img.onload = function(){
             ctxMap.drawImage(img,0,0,canvasMap.width,canvasMap.height);
         }
@@ -568,3 +570,17 @@ let createImage= function(context){
     image.src= context.canvas.toDataURL();
     return image;
 }
+
+
+////////////////////////////////////////
+///    拡大・縮小  //////////////////////
+////////////////////////////////////////
+
+let onefiveButton = document.getElementById("OnefiveButton");
+onefiveButton.addEventListener('click',(event)=>{
+    console.log("1.5");
+    ctxMap.scale(.5,1.5);
+    img2.onload = function(){
+        ctxMap.drawImage(img2,0,0,canvasMap.width,canvasMap.height);
+    }
+})

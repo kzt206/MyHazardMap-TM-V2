@@ -10,5 +10,6 @@
 
 ぜひ、ご活用ください。
 
-https://kzt206.github.io/MyHazardMap-TM_V2/
+https://kzt206.github.io/MyHazardMap-TM-V2/
+
 version 2
